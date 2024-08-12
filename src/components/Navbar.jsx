@@ -23,8 +23,8 @@ export default function () {
           </Link>
         </Button>
         <Button asChild>
-          <Link to="/contact" className="text-white">
-            Contact
+          <Link to="/contacts" className="text-white">
+            Contacts
           </Link>
         </Button>
       </div>
@@ -42,8 +42,8 @@ export default function () {
             </Link>
           </Button>
           <Button asChild>
-            <Link to="/contact" className="text-white">
-              Contact
+            <Link to="/contact" className="text-white ">
+              Contacts
             </Link>
           </Button>
         </Modal>

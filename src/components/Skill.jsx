@@ -85,19 +85,19 @@ export default function Skill() {
               {skillList.map((skill, index) => (
                 <li
                   key={skill.id}
-                  className={`flex items-center py-4 px-6 bg-gray-800 rounded-lg shadow-md ${
+                  className={`flex items-center py-4 px-2 bg-gray-800 rounded-lg shadow-md ${
                     index >= 2 ? 'border-t border-gray-200' : ''
                   }`}
                 >
-                  <span className="md:text-lg font-medium mr-4">{skill.id}.</span>
+                  <span className="md:text-lg font-medium mr-2">{skill.id}.</span>
                   <img
                     className="w-12 h-12 rounded-full object-cover mr-4"
                     src={skill.logo}
                     alt="User avatar"
                   />
                   <div className="flex-1 text">
-                    <h3 className="text-md md:text-lg font-bold">{skill.name}</h3>
-                    <p className="text-sm md:text-md">{skill.level}</p>
+                    <h3 className="text-[12px] md:text-lg font-bold">{skill.name}</h3>
+                    <p className="text-[12px] md:text-md">{skill.level}</p>
                   </div>
                 </li>
               ))}

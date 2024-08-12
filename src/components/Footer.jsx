@@ -12,24 +12,25 @@ const linkedInLink =
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto">
+      <div className="smx-auto">
         <div className="flex justify-between">
           <div className="flex align-middle">
-            <h1 className="text-2xl font-bold items-center flex">
-              <p className="text-sm">open source project</p>
+            <h1 className="text-xl md:text-2xl font-bold items-center md:flex">
+              <p className="text-[12px] md:text-md">open source project</p>
               <button
                 onClick={() => openInNewTab(repoLink)}
-                className="text-white pl-3"
+                className="text-white md:pl-4"
               >
                 <FaGithub />
               </button>
             </h1>
           </div>
           <div>
-            <p className="text-sm flex">
+            <p className="text-sm md:flex">
               <span className="font-bold pr-2">Email:</span>
               <a href="mailto:testing@example.com">
-                kajuscerniauskasked@gmail.com
+                <p className="text-">kajuscerniauskasked@gmail.com</p>
+
               </a>
             </p>
             <div className="flex space-x-4">

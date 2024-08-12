@@ -19,16 +19,14 @@ export default function Hero() {
       setSmoothY((prevY) => prevY + (mouseY - prevY) * easing);
     };
 
-    // Run the smoothing function in an animation frame for smooth updates
     const animationFrame = requestAnimationFrame(handleSmooth);
 
-    // Clean up the animation frame on component unmount
     return () => cancelAnimationFrame(animationFrame);
   }, [mouseX, mouseY]);
 
   return (
-    <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg h-[500px] md:h-full">
-      <p className="z-10 space-y-1 md:space-y-5 whitespace-pre-wrap text-center text-5xl font-medium tracking-normal md:tracking-tighter text-black dark:text-white">
+    <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg h-[500px] md:h-[70rem]">
+      <div className="z-10 space-y-1 md:space-y-5 whitespace-pre-wrap text-center text-5xl font-medium tracking-normal md:tracking-tighter text-black dark:text-white">
         <img
           src={myPicture}
           alt="Kajus Černiauskas"
@@ -61,7 +59,7 @@ export default function Hero() {
           }}
           text="Student at KTU"
         />
-      </p>
+      </div>
     </div>
   );
 }

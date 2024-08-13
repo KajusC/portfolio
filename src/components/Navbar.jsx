@@ -9,11 +9,18 @@ export default function () {
   return (
     <div className="flex w-full h-20 md:shadow-2xl bg-gray-900">
       <div className="flex items-center w-full h-full">
+        <Link to="/">
         <p className="text-white p-5 font-bold text-xl">Kajus Černiauskas</p>
+        </Link>
+        <Link to="/Kajus_Cerniauskas_CV.pdf" target="_blank" download>
+          <Button asChild>
+            <p className="text-white border-2 border-white rounded-3xl hover:bg-white hover:text-black">Download CV</p>
+          </Button>
+        </Link>
       </div>
       <div className="hidden md:flex justify-end items-center w-full h-full p-5">
         <Button asChild>
-          <Link to="/about" className="text-white">
+          <Link to="/" className="text-white">
             About
           </Link>
         </Button>
@@ -32,7 +39,7 @@ export default function () {
       <div className="flex md:hidden items-center justify-end w-full h-full p-5">
         <Modal title="Links">
           <Button asChild>
-            <Link to="/about" className="text-white">
+            <Link to="/" className="text-white">
               About
             </Link>
           </Button>
@@ -42,7 +49,7 @@ export default function () {
             </Link>
           </Button>
           <Button asChild>
-            <Link to="/contact" className="text-white ">
+            <Link to="/contacts" className="text-white ">
               Contacts
             </Link>
           </Button>

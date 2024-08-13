@@ -38,6 +38,7 @@ export default function Modal({ title, children }) {
                         key={index}
                         className={`flex items-center py-4 px-[25vw] rounded-lg shadow-md
                         }`}
+                        onClick={() => setShowModal(false)}
                       >
                         {child}
                       </li>

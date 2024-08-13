@@ -1,4 +1,5 @@
 import React from "react";
+import DisplayList from "./DisplayList";
 
 const cssLogo = "https://img.icons8.com/color/48/000000/css3.png";
 const htmlLogo = "https://img.icons8.com/color/48/000000/html-5.png";
@@ -78,32 +79,6 @@ const skillList = [
 
 export default function Skill() {
     return (
-        <>
-          <h1 className="text-2xl md:text-4xl font-bold grid">Skills</h1>
-          <div className="text-sm md:text-lg text-white shadow-md rounded-xl overflow-hidden max-w-lg mx-auto mt-16">
-            <ul className="grid grid-cols-2">
-              {skillList.map((skill, index) => (
-                <li
-                  key={skill.id}
-                  className={`flex items-center py-4 px-2 bg-gray-800 rounded-lg shadow-md ${
-                    index >= 2 ? 'border-t border-gray-200' : ''
-                  }`}
-                >
-                  <span className="md:text-lg font-medium mr-2">{skill.id}.</span>
-                  <img
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                    src={skill.logo}
-                    alt="User avatar"
-                  />
-                  <div className="flex-1 text">
-                    <h3 className="text-[12px] md:text-lg font-bold">{skill.name}</h3>
-                    <p className="text-[12px] md:text-md">{skill.level}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </>
-      );
-      
+      <DisplayList title="Skills" elementList={skillList} gridBy2={true} />
+    );
 }

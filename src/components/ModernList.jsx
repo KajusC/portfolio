@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function ModernList({ itemLogo, itemTitle, itemDescription }) {
+export default function ModernDescription({ itemLogo, itemTitle, itemDescription }) {
   return (
     <div className="grid md:grid-cols-2 gap-10 mt-10">
       <div className="flex gap-4 items-start">

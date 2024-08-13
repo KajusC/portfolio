@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex justify-between">
           <div className="flex align-middle">
             <h1 className="text-xl md:text-2xl font-bold items-center md:flex">
-              <p className="text-[12px] md:text-md">open source project</p>
+              <p className="text-[12px] md:text-md">Source:</p>
               <button
                 onClick={() => openInNewTab(repoLink)}
                 className="text-white md:pl-4"

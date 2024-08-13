@@ -25,6 +25,8 @@ export default function Hero() {
   }, [mouseX, mouseY]);
 
   return (
+    <>
+
     <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg h-[500px] md:h-[70rem]">
       <div className="z-10 space-y-1 md:space-y-5 whitespace-pre-wrap text-center text-5xl font-medium tracking-normal md:tracking-tighter text-black dark:text-white">
         <img
@@ -61,5 +63,6 @@ export default function Hero() {
         />
       </div>
     </div>
+    </>
   );
 }

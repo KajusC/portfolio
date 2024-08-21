@@ -1,11 +1,11 @@
 import React from "react";
 
 
-export default function ModernDescription({ itemLogo, itemTitle, itemDescription }) {
+export default function ModernDescription({ itemLogo, itemTitle, itemDescription,size, centered = false }) {
   return (
-    <div className="grid md:grid-cols-2 gap-10 mt-10">
+    <div className={` ${centered ? 'flex flex-col place-items-center' : 'grid'} md:grid-cols-2 gap-10 mt-10`}>
       <div className="flex gap-4 items-start">
-        <span className="text-violet-600 bg-violet-500/10 p-3 rounded-full">
+        <span className={`bg-violet-500/10 p-3 rounded-full ${size}`}>
           <img src={itemLogo} className=" rounded-xl" />
         </span>
         <div>

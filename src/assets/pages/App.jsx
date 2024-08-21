@@ -5,10 +5,11 @@ import "../css/App.css";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import About from "@/components/About";
+import About from "../pages/About";
 import NotFound from "./NotFound";
 import Contacts from "./Contacts";
 import Projects from "./Projects";
+import EpamReview from "./EpamReview";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route
-          path="/"
+          path="/portfolio"
           element={
             <>
               <Hero />
@@ -26,6 +27,7 @@ function App() {
         />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/epam" element={<EpamReview /> } />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

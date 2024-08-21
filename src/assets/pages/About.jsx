@@ -1,10 +1,13 @@
 import React from "react";
-import Skill from "./Skill";
-import ModernDescription from "./ModernList";
-import Languages from "./Languages";
-import AboutComponent from "./AboutComponent";
+import Skill from "../../components/Skill.jsx";
+import ModernDescription from "../../components/ModernList.jsx";
+import Languages from "../../components/Languages.jsx";
+import AboutComponent from "../../components/AboutComponent.jsx";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button.jsx";
 
 const currentDateTime = new Date();
+const epamLogo = "/epam_logo_light.svg";
 
 export default function About() {
   const [studyYearInString, setStudyYearInString] = React.useState("1st");
@@ -41,14 +44,17 @@ export default function About() {
           <Skill />
           <Languages />
         </div>
-        <div className="flex flex-col items-center md:items-start space-y-6">
+        <div className="flex flex-col items-center md:items-start space-y-6 ">
           <h1 className="text-4xl font-bold text-center md:text-left">
             About Me
           </h1>
-          <p className="text-sm md:text-lg md:w-2/3 text-center md:text-left">{aboutText}</p>
+          <p className="text-sm md:text-lg md:w-2/3 text-center md:text-left">
+            {aboutText}
+          </p>
           <h1 className="text-4xl font-bold text-center md:text-left">
             Education
           </h1>
+
           <AboutComponent
             title="Software Systems, Bachelor's degree | 2022 - present"
             subtitle="Kaunas University of Technology"
@@ -80,12 +86,28 @@ export default function About() {
           <AboutComponent
             title="Participant | 2024 04 - 2024 05"
             subtitle="Nando Hackathon"
+            
           >
             <ModernDescription
               itemLogo="https://img.icons8.com/?size=100&id=GGHuhIvEes5B&format=png&color=000000"
               itemTitle="Winners of the international hackathon"
               itemDescription="We have introduced a solution to scan plant diseases using a drone and then processing the data using AI."
             />
+          </AboutComponent>
+          <AboutComponent
+            title="Student | 2024 02 - 2024 07"
+            subtitle="EPAM .NET course"
+            last={true}
+          >
+            <Link to="/epam">
+            <ModernDescription
+              itemLogo="https://cdn.prod.website-files.com/6371f3e94a645947f33e2581/6602b6d40d0b4f919b155ade_EPAM-p-800.jpg"
+              itemTitle="Successfully completed the course"
+              itemDescription="Press this section to see the final review of the course."
+              size={"size-[100px] align-middle justify-center flex flex-col"}
+
+            />
+              </Link>
           </AboutComponent>
         </div>
       </div>
